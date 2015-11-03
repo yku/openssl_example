@@ -15,4 +15,9 @@ void init_openssl(void)
     SSL_load_error_strings();
 }
 
-
+int seed_prng(int bytes)
+{
+    if(!RAND_load_file("/dev/urandom", bytes))
+        return 0;
+    return 1;
+}

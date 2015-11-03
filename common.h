@@ -16,5 +16,5 @@
 void handle_error(const char *file, int lineno, const char *msg);
 
 void init_openssl(void);
-
+int seed_prng(int);
 #endif
